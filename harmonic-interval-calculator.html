@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Harmonic Interval Calculator</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- Harmonic Calculator Script -->
+    <script src="calculator.js"></script>
+
+</head>
+  <body>
+    <div class="container">
+    <center>
+    <div class="input-group mb-3 mr-sm-2">
+        <div class="input-group-prepend">
+          <div class="input-group-text">Fundamental</div>
+        </div>
+        <input type="number" value="430" min="1" max="24000" step="10" class="form-control" id="fundamental" placeholder="430" onchange="multiplyBy()">
+        <div class="input-group-append">
+            <button class="btn btn-outline-info" onClick="multiplyBy()" Value="Calculate" type="button">Calculate</button>
+          </div>
+      </div>
+    </center>
+    </div>
+    <div class="container text-center">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Harmonic</th>
+                    <th scope="col">Frequency</th>
+                    <th scope="col">Interval</th>
+                </tr>
+            </thead>
+            <tr>
+                <th scope="col">3<sup>rd</sup></th>
+                <th scope="col"><span id="3rd">-</span> Hz</th>
+                <th scope="col">Perfect 5<sup>th</sup><br><small>Above 1<sup>st</sup> octave</small></th>
+            </tr>
+            <tr>
+                <th scope="col">5<sup>th</sup></th>
+                <th scope="col"><span id="5th">-</span> Hz</th>
+                <th scope="col text-left">Major 3<sup>rd</sup><br><small>Above 2<sup>nd</sup> octave</small></th>
+            </tr>
+            <tr>
+                <th scope="col">6<sup>th</sup></th>
+                <th scope="col"><span id="6th">-</span> Hz</th>
+                <th scope="col">Minor 3<sup>rd</sup><br><small>Above 2<sup>nd</sup> octave</small></th>
+            </tr>
+            <tr>
+                <th scope="col">7<sup>th</sup></th>
+                <th scope="col"><span id="7th">-</span> Hz</th>
+                <th scope="col">Minor 7<sup>th</sup><br><small>Above 2<sup>nd</sup> octave</small></th>
+            </tr>
+            <tr>
+                <th scope="col">10<sup>th</sup></th>
+                <th scope="col"><span id="10th">-</span> Hz</th>
+                <th scope="col">Major 3<sup>rd</sup><br><small>Above 3<sup>rd</sup> octave</small></th>
+            </tr>
+        </table>
+    </div>
+  </body>
+</html>
